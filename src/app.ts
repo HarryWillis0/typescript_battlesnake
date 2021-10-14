@@ -1,9 +1,9 @@
 /**
  * End points for battlesnake (/, /start, /move and /end)
  */
-import express, { Request, Response } from "express";
+import express, { Request, Response } from 'express';
 
-import { snakeMetaData } from "./consts";
+import { snakeMetaData } from './consts';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -13,7 +13,7 @@ const port = process.env.PORT || 3000;
  * Called periodically by game engine
  * Should respond with MetaResponse type
  */
-app.get("/", (req: Request, res: Response) => {
+app.get('/', (req: Request, res: Response) => {
   res.status(200).json(snakeMetaData);
 });
 
@@ -21,7 +21,7 @@ app.get("/", (req: Request, res: Response) => {
  * POST: /start
  * Called once at beginning of each game
  */
-app.post("/start", (req: Request, res: Response) => {
+app.post('/start', (req: Request, res: Response) => {
   res.status(200);
 });
 
@@ -31,7 +31,7 @@ app.post("/start", (req: Request, res: Response) => {
  * - receives info about the board
  * - respond with move
  */
-app.post("/move", (req: Request, res: Response) => {
+app.post('/move', (req: Request, res: Response) => {
   // todo
 });
 
@@ -39,7 +39,7 @@ app.post("/move", (req: Request, res: Response) => {
  * POST: /end
  * Called once at the end of each game
  */
-app.post("/end", (req: Request, res: Response) => {
+app.post('/end', (req: Request, res: Response) => {
   // todo
 });
 

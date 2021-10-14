@@ -15,4 +15,4 @@ declare type SnakeMetaData = {
   version?: string;
 };
 
-export { SnakeMetaData };
+export { SnakeMetaData, Board };
